@@ -25,8 +25,6 @@ const DeletePostConfirmation = () => {
             })
                 .then(response => {
                     if (response.ok) {
-                        // Удаление прошло успешно
-                        // Обновляем список постов после успешного удаления
                         setPosts(prevPosts => prevPosts.filter(post => post.id !== postId))
                     } else {
                         console.log('Error deleting post')
